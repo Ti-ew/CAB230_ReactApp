@@ -1,0 +1,20 @@
+.nav-container {
+    display: flex;
+    justify-content: flex-end; /* Align the links to the left side */
+    padding: 10px;
+    background-color: #202020;
+  }
+
+  .nav-link {
+    margin-right: 50px; /* Add some space between the links */
+    padding: 15px 15px;
+    text-decoration: none; /* Remove the underline */
+    color: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+
+  .nav-link:hover {
+    background-color: #ddd; /* Add a hover effect to all links */
+  }
