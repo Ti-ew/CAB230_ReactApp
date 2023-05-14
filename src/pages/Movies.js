@@ -91,7 +91,6 @@ function Movies() {
           ...ratings,
         };
       });
-
       const movieDataArray = await Promise.all(movieDataPromises);
       console.log(movieDataArray);
       setMovies(movieDataArray);
