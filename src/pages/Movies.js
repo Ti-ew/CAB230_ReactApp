@@ -121,7 +121,7 @@ function Movies() {
       <div
         className="ag-theme-balham-dark"
         style={{
-          width: "100%",
+          width: "90%",
           marginTop: "20px",
         }}
       >

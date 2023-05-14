@@ -1,6 +1,7 @@
 import React from 'react';
 import backgroundImage from '../components/photos/MovieImage.jpg';
 import './Home.css';
+
 function Home() {
   return (
     <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})`}}>
