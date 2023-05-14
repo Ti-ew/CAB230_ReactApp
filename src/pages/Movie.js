@@ -4,7 +4,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-balham.css";
 import { AuthContext } from "../contexts/AuthContext";
-import Footer from "../components/Footer";
+
 const API_URL = `http://sefdb02.qut.edu.au:3000`;
 
 function Movie() {
@@ -98,7 +98,7 @@ function Movie() {
           paginationPageSize={10}
           domLayout="autoHeight"
         />
-        <Footer />
+
       </div>
     </div>
   );

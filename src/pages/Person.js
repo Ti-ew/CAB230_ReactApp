@@ -3,10 +3,10 @@ import { useParams, Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import { AgGridReact } from "ag-grid-react";
 import _ from "lodash";
+import { Chart as ChartJS } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-balham.css";
-
 
 const API_URL = `http://sefdb02.qut.edu.au:3000`;
 
@@ -43,10 +43,6 @@ function Person() {
     },
     { headerName: "Rating", field: "imdbRating", sortable: true, filter: true },
   ];
-
-
-
-
 
   useEffect(() => {
     async function fetchPersonData() {
@@ -92,7 +88,6 @@ function Person() {
       },
     ],
   };
-  console.log(chartData);
   return (
     <div>
       <h2>{person.name}</h2>
@@ -101,8 +96,9 @@ function Person() {
       <div
         className="ag-theme-balham-dark"
         style={{
-          position: "relative",
-          height: "calc(100vh - 550px)",
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "calc(100vh - 550px)",
           width: "100%",
         }}
       >
@@ -114,7 +110,9 @@ function Person() {
           paginationPageSize={10}
           domLayout="autoHeight"
         />
-        <Bar data={chartData} />
+        <div style={{ height: "300px" }}>
+          <Bar data={chartData} />
+        </div>
       </div>
     </div>
   );
